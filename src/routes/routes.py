@@ -16,4 +16,4 @@ async def create_log(log: list[LogBase], status_code=201):
     users_dict = analyze_logs(log)
     for user in users_dict:
         print(f"*User{users_dict[user]}\n*User Score:{users_dict[user].generate_score()}")
-    return {"message": "Log created successfully"}
+    return users_dict
